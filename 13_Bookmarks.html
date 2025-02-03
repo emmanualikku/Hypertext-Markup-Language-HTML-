@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Types of Bookmarks</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      line-height: 60px;
+    }
+  </style>
+  <script>
+    function scrollToSection(event, sectionId) {
+      event.preventDefault();
+      const section = document.getElementById(sectionId);
+      const offset = 60; // Adjust this value based on your fixed header height
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const sectionRect = section.getBoundingClientRect().top;
+      const sectionPosition = sectionRect - bodyRect;
+      const offsetPosition = sectionPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>Fixed Header</header>
+  <h1>All Types of Bookmarks</h1>
+
+  <!-- Basic Bookmark -->
+  <p><a href="#section1">Go to Section 1</a></p>
+
+  <!-- Bookmark with Smooth Scrolling -->
+  <p><a href="#section2">Go to Section 2</a></p>
+
+  <!-- Bookmark with Offset for Fixed Header -->
+  <p><a href="#section3">Go to Section 3</a></p>
+
+  <!-- Bookmark with JavaScript for Dynamic Offset -->
+  <p><a href="#section4" onclick="scrollToSection(event, 'section4')">Go to Section 4</a></p>
+
+  <!-- Sections for Internal Links -->
+  <h2 id="section1">Section 1</h2>
+  <p>This is the section that the internal link points to.</p>
+
+  <h2 id="section2">Section 2</h2>
+  <p>This is the section that the internal link points to.</p>
+
+  <h2 id="section3" style="padding-top: 60px; margin-top: -60px;">Section 3</h2>
+  <p>This is the section that the internal link points to.</p>
+
+  <h2 id="section4">Section 4</h2>
+  <p>This is the section that the internal link points to.</p>
+</body>
+</html>
