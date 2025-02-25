@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML All-in-One Example</title>
+    <style>
+        .header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            background-color: #d9d9d9;
+            padding: 20px;
+            margin: 10px 0;
+        }
+        .footer {
+            background-color: #bfbfbf;
+            padding: 10px;
+            text-align: center;
+        }
+        .block-element {
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .inline-element {
+            background-color: #d9d9d9;
+            padding: 5px;
+        }
+        .col1 {
+            background-color: #f2f2f2;
+        }
+        .col2 {
+            background-color: #d9d9d9;
+        }
+        .col3 {
+            background-color: #bfbfbf;
+        }
+    </style>
+</head>
+<body>
+    <div id="header" class="header">
+        <h1>Header Section</h1>
+    </div>
+    <div id="content" class="content">
+        <h2>Content Section</h2>
+        <p>This is the content section. It has a different background color and padding.</p>
+        <div class="block-element">
+            <h3>Block Element</h3>
+            <p>This is a paragraph inside a block element with <span class="inline-element">inline element</span>.</p>
+        </div>
+        <h3>Lists</h3>
+        <ul>
+            <li>Unordered Item 1</li>
+            <li>Unordered Item 2</li>
+            <li>Unordered Item 3</li>
+        </ul>
+        <ol>
+            <li>Ordered Item 1</li>
+            <li>Ordered Item 2</li>
+            <li>Ordered Item 3</li>
+        </ol>
+        <dl>
+            <dt>Term 1</dt>
+            <dd>Description for Term 1</dd>
+            <dt>Term 2</dt>
+            <dd>Description for Term 2</dd>
+            <dt>Term 3</dt>
+            <dd>Description for Term 3</dd>
+        </dl>
+        <h3>Table</h3>
+        <table border="1">
+            <colgroup>
+                <col class="col1">
+                <col class="col2">
+                <col class="col3">
+            </colgroup>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+            </tr>
+        </table>
+        <h3>Iframe</h3>
+        <iframe src="https://www.example.com" width="600" height="400" title="Example Iframe"></iframe>
+    </div>
+    <div id="footer" class="footer">
+        <p>Footer Section</p>
+    </div>
+</body>
+</html>
