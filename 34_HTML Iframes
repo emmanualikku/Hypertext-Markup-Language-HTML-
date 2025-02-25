@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Iframe Example</title>
+</head>
+<body>
+    <h1>HTML Iframe Example</h1>
+    <iframe src="https://www.example.com" width="600" height="400" title="Example Iframe"></iframe>
+</body>
+</html>
