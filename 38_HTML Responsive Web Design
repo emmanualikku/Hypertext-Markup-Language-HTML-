@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Web Design Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header, nav, section, article, aside, footer {
+            padding: 10px;
+            margin: 10px 0;
+        }
+        header {
+            background-color: #f2f2f2;
+        }
+        nav {
+            background-color: #d9d9d9;
+        }
+        section {
+            background-color: #bfbfbf;
+        }
+        article {
+            background-color: #e6e6e6;
+        }
+        aside {
+            background-color: #cccccc;
+        }
+        footer {
+            background-color: #a6a6a6;
+            text-align: center;
+        }
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            nav, aside {
+                display: none;
+            }
+            section, article {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Responsive Web Design Example</h1>
+            <p>This is the header section.</p>
+        </header>
+        <nav>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Main Content</h2>
+            <article>
+                <h3>Article 1</h3>
+                <p>This is the first article.</p>
+            </article>
+            <article>
+                <h3>Article 2</h3>
+                <p>This is the second article.</p>
+            </article>
+        </section>
+        <aside>
+            <h2>Sidebar</h2>
+            <p>This is the sidebar content.</p>
+        </aside>
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+</body>
+</html>
