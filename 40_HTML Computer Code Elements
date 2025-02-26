@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Code Elements Example</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
+    <style>
+        .code-container {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Code Elements Example</h1>
+
+    <!-- Inline Code -->
+    <div class="code-container">
+        <h2>Inline Code</h2>
+        <p>To print "Hello, World!" in Python, use the <code>print("Hello, World!")</code> statement.</p>
+    </div>
+
+    <!-- Block of Code -->
+    <div class="code-container">
+        <h2>Block of Code</h2>
+        <pre>
+def hello_world():
+    print("Hello, World!")
+        </pre>
+    </div>
+
+    <!-- Code with Syntax Highlighting -->
+    <div class="code-container">
+        <h2>Code with Syntax Highlighting</h2>
+        <pre><code class="language-python">
+def hello_world():
+    print("Hello, World!")
+        </code></pre>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+</body>
+</html>
