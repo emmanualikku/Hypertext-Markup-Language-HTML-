@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Canvas Graphics Example</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Canvas Graphics Example</h1>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+
+        // Draw a rectangle
+        ctx.fillStyle = '#FF0000';
+        ctx.fillRect(50, 50, 150, 100);
+
+        // Draw a circle
+        ctx.beginPath();
+        ctx.arc(300, 100, 50, 0, 2 * Math.PI);
+        ctx.fillStyle = '#00FF00';
+        ctx.fill();
+
+        // Draw a line
+        ctx.beginPath();
+        ctx.moveTo(50, 200);
+        ctx.lineTo(200, 300);
+        ctx.strokeStyle = '#0000FF';
+        ctx.stroke();
+
+        // Draw text
+        ctx.font = '30px Arial';
+        ctx.fillStyle = '#000000';
+        ctx.fillText('Hello Canvas', 50, 400);
+
+        // Draw an image
+        var img = new Image();
+        img.onload = function() {
+            ctx.drawImage(img, 300, 300, 100, 100);
+        };
+        img.src = 'https://www.example.com/image.png';
+    </script>
+</body>
+</html>
