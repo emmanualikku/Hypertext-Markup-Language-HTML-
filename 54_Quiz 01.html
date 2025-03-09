@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Marvel Quiz</h1>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. What is Iron Man's real name?</p>
+            <input type="radio" name="q1" value="a"> A. Tony Stark<br>
+            <input type="radio" name="q1" value="b"> B. Tony Shark<br>
+            <input type="radio" name="q1" value="c"> C. Tony Snack<br>
+        </div>
+        <div class="question">
+            <p>2. Who is the God of Thunder?</p>
+            <input type="radio" name="q2" value="a"> A. Thor<br>
+            <input type="radio" name="q2" value="b"> B. Thar<br>
+            <input type="radio" name="q2" value="c"> C. War<br>
+        </div>
+        <div class="question">
+            <p>3. What is Captain America's shield made of?</p>
+            <input type="radio" name="q3" value="a"> A. Vibranium<br>
+            <input type="radio" name="q3" value="b"> B. Vibrator<br>
+            <input type="radio" name="q3" value="c"> C. Lubricator<br>
+        </div>
+        <div class="question">
+            <p>4. Who is the leader of the Guardians of the Galaxy?</p>
+            <input type="radio" name="q4" value="a"> A. Star-Lord<br>
+            <input type="radio" name="q4" value="b"> B. Donald-Duck<br>
+            <input type="radio" name="q4" value="c"> C. Jack Sparrow<br>
+        </div>
+        <div class="question">
+            <p>5. What is Black Panther's real name?</p>
+            <input type="radio" name="q5" value="a"> A. T'Challa<br>
+            <input type="radio" name="q5" value="b"> B. T'Chill<br>
+            <input type="radio" name="q5" value="c"> C. T'Choco<br>
+        </div>
+        <div class="question">
+            <p>6. Who is the Scarlet Witch's brother?</p>
+            <input type="radio" name="q6" value="a"> A. Quicksilver<br>
+            <input type="radio" name="q6" value="b"> B. Quickgold<br>
+            <input type="radio" name="q6" value="c"> C. Quickbronze<br>
+        </div>
+        <div class="question">
+            <p>7. What is the Hulk's real name?</p>
+            <input type="radio" name="q7" value="a"> A. Bruce Banner<br>
+            <input type="radio" name="q7" value="b"> B. Bruce Banter<br>
+            <input type="radio" name="q7" value="c"> C. Bruce Bananas<br>
+        </div>
+        <div class="question">
+            <p>8. Is Spider-Man a Virgin ?</p>
+            <input type="radio" name="q8" value="a"> A. Yah (70%)<br>
+            <input type="radio" name="q8" value="b"> B. Yes(95%)<br>
+            <input type="radio" name="q8" value="c"> C. Ofcourse(99.99999999%)<br>
+        </div>
+        <div class="question">
+            <p>9. What is Doctor Strange's real name?</p>
+            <input type="radio" name="q9" value="a"> A. Stephen Strange<br>
+            <input type="radio" name="q9" value="b"> B. Stephen Stranger<br>
+            <input type="radio" name="q9" value="c"> C. Stephen Strangest<br>
+        </div>
+        <div class="question">
+            <p>10. Who is the Winter Soldier?</p>
+            <input type="radio" name="q10" value="a"> A. Bucky Barnes<br>
+            <input type="radio" name="q10" value="b"> B. Bucky Buns<br>
+            <input type="radio" name="q10" value="c"> C. Bucky Beans<br>
+        </div>
+        <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+    <div class="result" id="result"></div>
+
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: 'a',
+                q2: 'a',
+                q3: 'a',
+                q4: 'a',
+                q5: 'a',
+                q6: 'a',
+                q7: 'a',
+                q8: 'c',
+                q9: 'a',
+                q10: 'a'
+            };
+
+            const explanations = {
+                q1: "Tony Stark is Iron Man.",
+                q2: "Thor is the God of Thunder.",
+                q3: "Captain America's shield is made of Vibranium.",
+                q4: "Star-Lord is the leader of the Guardians of the Galaxy.",
+                q5: "T'Challa is Black Panther's real name.",
+                q6: "Quicksilver is the Scarlet Witch's brother.",
+                q7: "Bruce Banner is the Hulk's real name.",
+                q8: "Peter Parker never had a girlfriend or bestie .",
+                q9: "Stephen Strange is Doctor Strange's real name.",
+                q10: "Bucky Barnes is the Winter Soldier."
+            };
+
+            let score = 0;
+            let resultHTML = '<h2>Results</h2>';
+
+            for (let i = 1; i <= 10; i++) {
+                const question = 'q' + i;
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (userAnswer) {
+                    if (userAnswer.value === answers[question]) {
+                        score++;
+                        resultHTML += `<p>Question ${i}: Correct! ${explanations[question]}</p>`;
+                    } else {
+                        resultHTML += `<p>Question ${i}: Wrong. ${explanations[question]}</p>`;
+                    }
+                } else {
+                    resultHTML += `<p>Question ${i}: No answer selected.</p>`;
+                }
+            }
+
+            resultHTML += `<p>Your score: ${score} out of 10</p>`;
+            document.getElementById('result').innerHTML = resultHTML;
+        }
+    </script>
+</body>
+</html>
